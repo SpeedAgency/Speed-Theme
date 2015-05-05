@@ -119,11 +119,6 @@ hr {
 .sticky, .gallery-caption, .bypostauthor {
 
 }
-/* Steve insists on this */
-.container {
-	max-width: 960px;
-	margin: 0 auto;
-}
 
 /* and I use these on everything */
 .clearme {

@@ -2,9 +2,8 @@
 // Add RSS links to <head> section
 function blank_enqueue_scripts() {
     // Load jQuery
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', ('http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'), false);
-    wp_enqueue_script('jquery');
+    wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+    wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
 }
 add_action('wp_enqueue_scripts', 'blank_enqueue_scripts');
 
