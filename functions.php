@@ -2,10 +2,20 @@
 // Add RSS links to <head> section
 function blank_enqueue_scripts() {
     // Load jQuery
+	wp_register_script( 'GoogleMaps', 'http://maps.google.com/maps/api/js?sensor=false', array('jquery'));
+	wp_register_script( 'Bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'));
+	
     wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
     
     wp_register_script('extended', get_stylesheet_directory_uri().'/js/extended.js', array('jquery'));
+    
+    $site = array(
+	    'theme_dir' => get_stylesheet_directory_uri(),
+	    'ajaxurl' => admin_url('admin-ajax.php')
+    );
+	
+	wp_localize_script('extended', 'site', $site);
     
     wp_enqueue_script('extended');
     
