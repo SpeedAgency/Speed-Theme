@@ -15,7 +15,6 @@
 
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/extended.js" type="text/javascript"></script>
     
 </head>
 

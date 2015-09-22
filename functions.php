@@ -4,6 +4,11 @@ function blank_enqueue_scripts() {
     // Load jQuery
     wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
+    
+    wp_register_script('extended', get_stylesheet_directory_uri().'/js/extended.js', array('jquery'));
+    
+    wp_enqueue_script('extended');
+    
 }
 add_action('wp_enqueue_scripts', 'blank_enqueue_scripts');
 
